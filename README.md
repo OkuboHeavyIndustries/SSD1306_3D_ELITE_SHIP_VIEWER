@@ -1,4 +1,4 @@
-# ST7789_3D_ELITE_TFT_eSPI
+# SSD1306_3D_ELITE
 ELITE SHIP Viewer
 Based on an idea of https://www.reddit.com/r/EliteDangerous/comments/bjdg54/old_school_elite_ship_viewer/
 
