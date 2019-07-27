@@ -288,32 +288,5 @@ clearOLED();
   ship_faces_cnt = thargoid_faces_cnt;
   rotate_ship();
 
-clearOLED();
-  ShipName = "Python";
-  memcpy(ship_vertices, python_vertices, sizeof(python_vertices));
-  ship_vertices_cnt = python_vertices_cnt;
-  scale = python_scale;
-  memcpy(ship_faces, python_faces, sizeof(python_faces));
-  ship_faces_cnt = python_faces_cnt;
-  rotate_ship();
-
-  clearOLED();
-  ShipName = "Cobra Mk.I";
-  memcpy(ship_vertices, cobraI_vertices, sizeof(cobraI_vertices));
-  ship_vertices_cnt = cobraI_vertices_cnt;
-  scale = cobraI_scale;
-  memcpy(ship_faces, cobraI_faces, sizeof(cobraI_faces));
-  ship_faces_cnt = cobraI_faces_cnt;
-  rotate_ship();
-
-  clearOLED();
-  ShipName = "Boa";
-  memcpy(ship_vertices, boa_vertices, sizeof(boa_vertices));
-  ship_vertices_cnt = boa_vertices_cnt;
-  scale = boa_scale;
-  memcpy(ship_faces, boa_faces, sizeof(boa_faces));
-  ship_faces_cnt = boa_faces_cnt;
-  rotate_ship();
-  
 }
 
