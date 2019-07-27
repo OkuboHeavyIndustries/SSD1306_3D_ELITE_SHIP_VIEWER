@@ -1,7 +1,7 @@
 # SSD1306_3D_ELITE_SHIP_VIEWER
 ELITE SHIP Viewer
 
-3D model data fromIan Bell's Elite site - http://www.elitehomepage.org/archive/index.htm
+3D model data from Ian Bell's Elite site - http://www.elitehomepage.org/archive/index.htm
 
 Code based on http://colinord.blogspot.com/2015/01/arduino-oled-module-with-3d-demo.html
 
