@@ -11,7 +11,7 @@ File: b7051600.zip
 
 Thanks to Ian Bell and David Braben for creating Elite.
  
-Code running on a Nerdonic Exen Mini and 0.96" SSD1306 I2C OLED Display: https://youtu.be/klFn6bdEazA
+Code running on a Nerdonic Exen Mini and 0.96" SSD1306 I2C OLED Display: https://youtu.be/8yCet1on3bU
 
 Okubo Heavy Industries - 1st August 2019
 
