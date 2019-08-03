@@ -567,7 +567,7 @@ void adder(void) {
 void asp(void) {
   boot_sequence();
   clearOLED();
-  ShipName = "ASP";
+  ShipName = "ASP MK.II";
   ShipType = "Pirate";
   ShipHyperspace = "Yes";
   ShipClass = "CF4";
@@ -584,7 +584,7 @@ void anaconda(void) {
   boot_sequence();
   clearOLED();
   ShipName = "ANACONDA";
-  ShipType = "Freighter";
+  ShipType = "Heavy Freighter";
   ShipHyperspace = "Yes";
   ShipClass = "CF3";
   memcpy(ship_vertices, anaconda_vertices, sizeof(anaconda_vertices));
@@ -632,7 +632,7 @@ void coriolis(void) {
   boot_sequence();
   clearOLED();
   ShipName = "CORIOLIS STATION";
-  ShipType = "Station";
+  ShipType = "Orbital Station";
   ShipHyperspace = "No";
   ShipClass = "N/A";
   memcpy(ship_vertices, coriolis_vertices, sizeof(coriolis_vertices));
@@ -648,7 +648,7 @@ void dodo(void) {
   boot_sequence();
   clearOLED();
   ShipName = "DODO STATION";
-  ShipType = "Station";
+  ShipType = "Space Station";
   ShipHyperspace = "No";
   ShipClass = "N/A";
   memcpy(ship_vertices, dodo_vertices, sizeof(dodo_vertices));
@@ -664,7 +664,7 @@ void thargoid(void) {
   boot_sequence();
   clearOLED();
   ShipName = "THARGOID";
-  ShipType = "Alien";
+  ShipType = "Alien Battleship";
   ShipHyperspace = "Yes";
   ShipClass = "CF6";
   memcpy(ship_vertices, thargoid_vertices, sizeof(thargoid_vertices));
@@ -728,7 +728,7 @@ void ferdelance(void) {
   boot_sequence();
   clearOLED();
   ShipName = "FER DE LANCE";
-  ShipType = "Combat Trader";
+  ShipType = "Bounty Hunter";
   ShipHyperspace = "Yes";
   ShipClass = "CF5";
   memcpy(ship_vertices, ferdelance_vertices, sizeof(ferdelance_vertices));
@@ -736,7 +736,7 @@ void ferdelance(void) {
   scale = ferdelance_scale;
   memcpy(ship_faces, ferdelance_faces, sizeof(ferdelance_faces));
   ship_faces_cnt = ferdelance_faces_cnt;
-  rotate_ship();
+  rotate_ship_2();
   clearOLED();
 }
 
@@ -820,6 +820,7 @@ void asteroid(void) {
   rotate_ship();
   clearOLED();
 }
+
 void boulder(void) {
   boot_sequence();
   clearOLED();
@@ -839,7 +840,7 @@ void boulder(void) {
 void cargo(void) {
   boot_sequence();
   clearOLED();
-  ShipName = "CARGO";
+  cargotype();
   ShipType = "Nav Hazard";
   ShipHyperspace = "No";
   ShipClass = "N/A";
@@ -935,7 +936,7 @@ void missile(void) {
 void platelet(void) {
   boot_sequence();
   clearOLED();
-  ShipName = "PLATELET";
+  ShipName = "HULL PLATELET";
   ShipType = "Nav Hazard";
   ShipHyperspace = "No";
   ShipClass = "N/A";
@@ -994,6 +995,81 @@ void cougar(void) {
   ship_faces_cnt = cougar_faces_cnt;
   rotate_ship();
   clearOLED();
+}
+
+void cargotype(void) {
+  int randomcargo = random(1,18); 
+  switch(randomcargo)
+  {
+   case 1:
+    ShipName = "CARGO (Food)";
+   break;
+
+   case 2:
+    ShipName = "CARGO (Textiles)";
+   break;
+
+   case 3:
+    ShipName = "CARGO (Radioactives)";
+   break;
+
+   case 4:
+    ShipName = "CARGO (Slaves)";
+   break;
+
+   case 5:
+    ShipName = "CARGO (Liquer/Wines)";
+   break;
+
+   case 6:
+    ShipName = "CARGO (Luxuries)";
+   break;
+
+   case 7:
+    ShipName = "CARGO (Narcotics)";
+   break;
+
+   case 8:
+    ShipName = "CARGO (Computers)";
+   break;
+
+   case 9:
+    ShipName = "CARGO (Machinery)";
+   break;
+
+   case 10:
+    ShipName = "CARGO (Alloys)";
+   break;
+
+   case 11:
+    ShipName = "CARGO (Firearms)";
+   break;
+
+   case 12:
+    ShipName = "CARGO (Furs)";
+   break;
+
+   case 13:
+    ShipName = "CARGO (Minerals)";
+   break;
+
+   case 14:
+    ShipName = "CARGO (Gold)";
+   break;
+
+   case 15:
+    ShipName = "CARGO (Platinum)";
+   break;
+
+   case 16:
+    ShipName = "CARGO (Gem-Stones)";
+   break;
+
+   case 17:
+    ShipName = "CARGO (Alien Items)";
+   break;
+   
+  }
 }
 
 void loop(void)
@@ -1120,7 +1196,7 @@ int randompick = random(1,30);
   break;
   }
 
-  int randomdelay = random(5,11); 
+  int randomdelay = random(5,11);  //random number of seconds from 5 - 10 to wait between cases
   delay(randomdelay*1000);
   
   /*cobraIII();
@@ -1167,3 +1243,4 @@ int randompick = random(1,30);
 */
 
 }
+
